@@ -45,4 +45,8 @@ abstract class AndroidSensor(
             onSensorValuesChanged?.invoke(event?.values.toList())
         }
     }
+
+    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
+        TODO("Not yet implemented")
+    }
 }
