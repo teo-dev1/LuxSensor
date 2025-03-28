@@ -11,9 +11,6 @@ import com.example.luxsensor.utils.MeasurableSensor
 class DependencyContainer(
  private val appContext: Context
 ){
-    private val sensorManager: SensorManager =
-        appContext.getSystemService(Context.SENSOR_SERVICE) as SensorManager
-
     val lightSensor: MeasurableSensor = LightSensor(appContext)
 
     val mainViewModelFactory:MainViewModelFactory=MainViewModelFactory(lightSensor)

@@ -19,8 +19,9 @@ abstract class AndroidSensor(
     private lateinit var sensorManager: SensorManager
     private var sensor:Sensor?=null
     override fun startListening() {
+        println("inizio")
         if(!doesItExist){
-
+          return
         }
         if(!::sensorManager.isInitialized && sensor== null){
             sensorManager= context.getSystemService(SensorManager::class.java) as SensorManager
@@ -47,6 +48,6 @@ abstract class AndroidSensor(
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
-        TODO("Not yet implemented")
+
     }
 }
